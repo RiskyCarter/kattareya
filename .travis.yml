@@ -16,6 +16,6 @@ after_success:
  - ls -l
  - scp -i "se234.pem" -r html/* ubuntu@54.187.89.205:/var/www/html/
  
- addons:
+addons:
   ssh_known_hosts:
    - 54.187.89.205
