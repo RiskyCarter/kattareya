@@ -3,7 +3,7 @@ install: true
 script: true
 
 after_success:
-- scp -i "se234.pem" -r html/* ubuntu@54.255.174.42:/var/www/html/
+- scp -i "se234.pem" -r html/* ubuntu@54.187.89.205:/var/www/html/
 
 env:
   global:
@@ -14,4 +14,4 @@ before_install:
   
 after_success:
  - ls -l
- - scp -i "se234.pem" -r html/* ubuntu@54.255.174.42:/var/www/html/
+ - scp -i "se234.pem" -r html/* ubuntu@54.187.89.205:/var/www/html/
