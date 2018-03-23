@@ -7,12 +7,12 @@ install: true
 before_script:
 - export DOCKER_HOST="$HOST_NAME"
 script:
-- docker build -t dto80/htmltest .
-- docker push dto/htmltest
+- docker build -t riskycarter/htmltest .
+- docker push riskycarter/htmltest
 after_success:
 - ls -l
 - scp -i "se234.pem" -r html/* ubuntu@54.187.89.205:/var/www/html/
-- docker run -p 8088:80 -d dto/htmltest:latest
+- docker run -p 8088:80 -d riskycarter/htmltest:latest
 service: docker
 env:
   global:
